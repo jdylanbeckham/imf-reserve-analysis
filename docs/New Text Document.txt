@@ -1,0 +1,66 @@
+Initial profile already established
+
+
+
+Rows:          1,028,852
+
+Columns:       7
+
+Countries:     215
+
+Indicators:    17
+
+Units:         3
+
+Scale:         Millions
+
+Duplicates:    0
+
+Null values:   0
+
+Period range:  2005 – 2025-Q2
+
+
+
+Frequency distribution:
+
+
+
+Monthly:      727,789
+
+Quarterly:    241,495
+
+Annual:        59,568
+
+
+
+Measurement units:
+
+
+
+US dollar
+
+SDR
+
+Fine troy ounces
+
+
+
+The retained analytical schema is:
+
+
+
+COUNTRY
+
+INDICATOR
+
+UNIT
+
+FREQUENCY
+
+SCALE
+
+DATE
+
+VALUE
+
