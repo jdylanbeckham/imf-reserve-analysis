@@ -1,0 +1,65 @@
+Title Slide::: 
+Weyland-Yutani Reserve Intelligence Dashboard
+Exploring Global Financial Reserves to Identify Strategic Expansion Targets
+Presented by J. Dylan Beckham
+ADTA 4240 – Harvesting, Storing, and Retrieving Data
+Instructor: Dr. Fantasia
+July 13, 2025
+
+Slide 2::: Project Purpose
+Weyland-Yutani is trying to understand world domination more clearly.  
+They have asked for an analysis of the world's international reserves to identify countries with weak financial buffers to support investment and policy development as the ideal "Global Company."
+
+Slide 3::: Understanding the IMF Dataset
+Source: International Monetary Fund (IMF)  
+Scope: Global financial reserves by country and indicator  
+Years Covered: 2020–2023  
+Format: Wide format, annual frequency  
+Key Fields: Country, Indicator, Year, Value
+
+Slide 4::: Preparing Data for Analysis
+• Uploaded IMF CSV to Google Cloud Storage  
+• Imported into BigQuery dataset `global_reserves`  
+• Reshaped data using `UNPIVOT` into year-value pairs  
+• Filtered out nulls for clean queries
+
+Slide 5::: Exploratory SQL Analysis
+• Validated years 2020–2023 are populated in dataset  
+• Identified key indicators: gold reserves, foreign asset claims  
+• Confirmed tidy (year-value) structure using SQL and `UNPIVOT`
+
+Slide 6::: Data Visualizations
+**Chart 1 – Top Reserve Holders (2023)**  
+[Insert bar chart from Looker Studio or Tableau]
+
+**Chart 2 – Global Reserves Over Time (2020–2023)**  
+[Insert line chart]
+
+Slide 7::: Insights from Disaggregated Reserve Data
+• **Top Reserve Holders**: Germany, India, Brazil  
+• **Sharp Growth**: East Asia, Middle East  
+• **Stagnation**: Sub-Saharan Africa, Eastern Europe
+
+Slide 8::: Opportunities for Weyland-Yutani
+**Stability Gaps Identified**  
+• Latin America – irregular/missing reserve data  
+• South Asia – uneven reserve levels
+
+**Strategic Actions**  
+1. Target regions with stagnant reserves for partnerships  
+2. Invest in rising economies like India/Brazil  
+3. Monitor reserve trends as early warning market signals
+
+Slide 9::: Final Summary
+This analysis leverages IMF data to guide Weyland-Yutani’s global strategy with the following key takeaways:  
+• Disaggregated reserve data reveals national stability patterns  
+• Identified target regions with strategic potential  
+• Informed expansion, risk mitigation, and market positioning  
+“Informed expansion builds lasting dominance.”
+
+Slide 10::: Credits
+Prepared by: J. Dylan Beckham  
+Course: ADTA 4240 – Harvesting, Storing, and Retrieving Data  
+Instructor: Dr. Fantasia  
+Client: Weyland-Yutani  
+Date: July 13, 2025

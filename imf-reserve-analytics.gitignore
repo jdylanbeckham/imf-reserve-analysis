@@ -1,0 +1,58 @@
+# IMF Reserve Analytics — .gitignore
+# Preserve repository structure and documentation while keeping
+# large local datasets, credentials, and temporary files out of Git.
+
+# -------------------------------------------------------------------
+# Local data
+# -------------------------------------------------------------------
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+# Keep the data documentation tracked
+!data/README.md
+
+# -------------------------------------------------------------------
+# Secrets / credentials
+# -------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+credentials/
+secrets/
+service-account*.json
+*credentials*.json
+
+# -------------------------------------------------------------------
+# Python / Jupyter artifacts
+# -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# -------------------------------------------------------------------
+# Editor / IDE files
+# -------------------------------------------------------------------
+.vscode/
+.idea/
+
+# -------------------------------------------------------------------
+# Operating-system files
+# -------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# -------------------------------------------------------------------
+# Temporary / backup files
+# -------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
