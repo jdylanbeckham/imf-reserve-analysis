@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='global_reserves_2020_2023' inline='true' name='federated.060d2te05xsih01azza74048tiod' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='global_reserves_2020_2023' name='textscan.1mqpit40jfouqr18tyxff0gcsdnw'>
+            <connection class='textscan' directory='E:/JDylanBeckham/Github/imf-reserve-analysis/data/processed' filename='global_reserves_2020_2023.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1mqpit40jfouqr18tyxff0gcsdnw' name='global_reserves_2020_2023.csv' table='[global_reserves_2020_2023#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='year' ordinal='0' />
+            <column datatype='real' name='global_reserve_total_millions_usd' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[global_reserves_2020_2023.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[global_reserves_2020_2023.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[global_reserves_2020_2023.csv_87F35D9F976C4E4AAAAAB457D8F42FC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>global_reserve_total_millions_usd</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[global_reserve_total_millions_usd]</local-name>
+            <parent-name>[global_reserves_2020_2023.csv]</parent-name>
+            <remote-alias>global_reserve_total_millions_usd</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[global_reserves_2020_2023.csv_87F35D9F976C4E4AAAAAB457D8F42FC9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Global Reserves USD Trillions' datatype='real' name='[Calculation_1696865246851072]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[global_reserve_total_millions_usd] / 1000000' />
+      </column>
+      <column aggregation='Sum' caption='Year Axis' datatype='real' name='[Calculation_1696865252179970]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='FLOAT([year])' />
+      </column>
+      <column caption='global_reserves_2020_2023.csv' datatype='table' name='[__tableau_internal_object_id__].[global_reserves_2020_2023.csv_87F35D9F976C4E4AAAAAB457D8F42FC9]' role='measure' type='quantitative' />
+      <column caption='Global Reserve Total Millions Usd' datatype='real' name='[global_reserve_total_millions_usd]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='global_reserves_2020_2023.csv' id='global_reserves_2020_2023.csv_87F35D9F976C4E4AAAAAB457D8F42FC9'>
+            <properties context=''>
+              <relation connection='textscan.1mqpit40jfouqr18tyxff0gcsdnw' name='global_reserves_2020_2023.csv' table='[global_reserves_2020_2023#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='year' ordinal='0' />
+                  <column datatype='real' name='global_reserve_total_millions_usd' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Trebuchet MS' fontsize='22'>Market Trends </run>
+            <run>Æ&#10;</run>
+            <run fontname='Trebuchet MS' fontsize='12'>Global Reserves (2020-23)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='global_reserves_2020_2023' name='federated.060d2te05xsih01azza74048tiod' />
+          </datasources>
+          <datasource-dependencies datasource='federated.060d2te05xsih01azza74048tiod'>
+            <column caption='Global Reserves USD Trillions' datatype='real' name='[Calculation_1696865246851072]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[global_reserve_total_millions_usd] / 1000000' />
+            </column>
+            <column aggregation='Sum' caption='Year Axis' datatype='real' name='[Calculation_1696865252179970]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='FLOAT([year])' />
+            </column>
+            <column caption='Global Reserve Total Millions Usd' datatype='real' name='[global_reserve_total_millions_usd]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1696865252179970]' derivation='None' name='[none:Calculation_1696865252179970:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1696865246851072]' derivation='Sum' name='[sum:Calculation_1696865246851072:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.060d2te05xsih01azza74048tiod].[sum:Calculation_1696865246851072:qk]' field-type='quantitative' scope='rows' type='space' />
+            <format attr='width' field='[federated.060d2te05xsih01azza74048tiod].[sum:Calculation_1696865246851072:qk]' value='57' />
+            <encoding attr='space' class='0' field='[federated.060d2te05xsih01azza74048tiod].[none:Calculation_1696865252179970:qk]' field-type='quantitative' major-origin='0.0' major-spacing='1.0' max='2023.1' min='2019.9' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.060d2te05xsih01azza74048tiod].[none:Calculation_1696865252179970:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.060d2te05xsih01azza74048tiod].[sum:Calculation_1696865246851072:qk]' value='c&quot;$&quot;#,##0.00&quot;T&quot;;(&quot;$&quot;#,##0.00&quot;T&quot;)' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <text column='[federated.060d2te05xsih01azza74048tiod].[sum:Calculation_1696865246851072:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run><![CDATA[<[federated.060d2te05xsih01azza74048tiod].[sum:Calculation_1696865246851072:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='top' />
+                <format attr='text-align' value='center' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Trebuchet MS' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.060d2te05xsih01azza74048tiod].[sum:Calculation_1696865246851072:qk]</rows>
+        <cols>[federated.060d2te05xsih01azza74048tiod].[none:Calculation_1696865252179970:qk]</cols>
+      </table>
+      <simple-id uuid='{D7231BB4-F140-4266-A883-3C884330534F}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='horizontal'>
+              <node-reference>
+                <axis>[federated.060d2te05xsih01azza74048tiod].[none:Calculation_1696865252179970:qk]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.060d2te05xsih01azza74048tiod].[none:Calculation_1696865252179970:ok]</field>
+            <field>[federated.060d2te05xsih01azza74048tiod].[none:year:ok]</field>
+            <field>[federated.060d2te05xsih01azza74048tiod].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{97805F2C-4EE7-498B-B140-C850CBC5F2EF}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

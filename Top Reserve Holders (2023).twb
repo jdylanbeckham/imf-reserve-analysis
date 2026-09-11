@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.25.1210.1815                               -->
+<workbook original-version='18.1' source-build='2025.3.1 (20253.25.1210.1815)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Top_reserve_holders_2023' inline='true' name='federated.1a2gxxn0dqyl461fvv29i1x83th9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Top_reserve_holders_2023' name='textscan.07gm3ny169uiuv1b5a7xk14m9i2d'>
+            <connection class='textscan' directory='E:/JDylanBeckham/Github/imf-reserve-analysis/data/processed' filename='Top_reserve_holders_2023.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.07gm3ny169uiuv1b5a7xk14m9i2d' name='Top_reserve_holders_2023.csv' table='[Top_reserve_holders_2023#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='COUNTRY' ordinal='0' />
+            <column datatype='real' name='gold_reserves_2023' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Top_reserve_holders_2023.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTRY]</local-name>
+            <parent-name>[Top_reserve_holders_2023.csv]</parent-name>
+            <remote-alias>COUNTRY</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Top_reserve_holders_2023.csv_E8AF0134B45741B3BAE8B991870E588D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gold_reserves_2023</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gold_reserves_2023]</local-name>
+            <parent-name>[Top_reserve_holders_2023.csv]</parent-name>
+            <remote-alias>gold_reserves_2023</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Top_reserve_holders_2023.csv_E8AF0134B45741B3BAE8B991870E588D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Top_reserve_holders_2023.csv' datatype='table' name='[__tableau_internal_object_id__].[Top_reserve_holders_2023.csv_E8AF0134B45741B3BAE8B991870E588D]' role='measure' type='quantitative' />
+      <column caption='Gold Reserves 2023' datatype='real' name='[gold_reserves_2023]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Top_reserve_holders_2023.csv' id='Top_reserve_holders_2023.csv_E8AF0134B45741B3BAE8B991870E588D'>
+            <properties context=''>
+              <relation connection='textscan.07gm3ny169uiuv1b5a7xk14m9i2d' name='Top_reserve_holders_2023.csv' table='[Top_reserve_holders_2023#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='COUNTRY' ordinal='0' />
+                  <column datatype='real' name='gold_reserves_2023' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='gold_reserve_comparison_2023' inline='true' name='federated.1rn6mvu0ewiimg15ygmfu0rpeitl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Top_reserve_holders_2023' name='textscan.0bsxgz71mp908k19wowr004lt1zh'>
+            <connection class='textscan' directory='E:/JDylanBeckham/Github/imf-reserve-analysis/data/processed' filename='Top_reserve_holders_2023.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0bsxgz71mp908k19wowr004lt1zh' name='Top_reserve_holders_2023.csv' table='[Top_reserve_holders_2023#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='COUNTRY' ordinal='0' />
+            <column datatype='real' name='gold_reserves_2023' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Top_reserve_holders_2023.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTRY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTRY]</local-name>
+            <parent-name>[Top_reserve_holders_2023.csv]</parent-name>
+            <remote-alias>COUNTRY</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Top_reserve_holders_2023.csv_78791587F6064FDBA287AFD4E51309C4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gold_reserves_2023</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gold_reserves_2023]</local-name>
+            <parent-name>[Top_reserve_holders_2023.csv]</parent-name>
+            <remote-alias>gold_reserves_2023</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Top_reserve_holders_2023.csv_78791587F6064FDBA287AFD4E51309C4]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <aliases>
+          <alias key='&quot;China, People&apos;s Republic of&quot;' value='China' />
+          <alias key='&quot;Netherlands, The&quot;' value='Netherlands' />
+          <alias key='&quot;Türkiye, Republic of&quot;' value='Türkiye' />
+        </aliases>
+      </column>
+      <column caption='Rank Discrepancy' datatype='integer' name='[Calculation_4641632239079424]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ABS([national_rank_minus_physical_rank])' />
+      </column>
+      <column caption='Value Label Position' datatype='real' name='[Calculation_4641632251498497]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[gold_reserves_2023] + 5000' />
+      </column>
+      <column caption='Top_reserve_holders_2023.csv' datatype='table' name='[__tableau_internal_object_id__].[Top_reserve_holders_2023.csv_78791587F6064FDBA287AFD4E51309C4]' role='measure' type='quantitative' />
+      <column caption='Gold Reserves 2023' datatype='real' name='[gold_reserves_2023]' role='measure' type='quantitative' />
+      <column caption='Market Value Million Sdr' datatype='real' name='[market_value_million_sdr]' role='measure' type='quantitative' />
+      <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_4641632251498497]' derivation='Sum' name='[sum:Calculation_4641632251498497:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gold_reserves_2023]' derivation='Sum' name='[sum:gold_reserves_2023:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:gold_reserves_2023:qk]&quot;</bucket>
+            </map>
+            <map to='#55ffff'>
+              <bucket>&quot;[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:Calculation_4641632251498497:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:COUNTRY:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Germany&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;China, People&apos;s Republic of&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Russian Federation&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;India&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Japan&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Netherlands, The&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;France&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Switzerland&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Italy&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Türkiye, Republic of&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Top_reserve_holders_2023.csv' id='Top_reserve_holders_2023.csv_78791587F6064FDBA287AFD4E51309C4'>
+            <properties context=''>
+              <relation connection='textscan.0bsxgz71mp908k19wowr004lt1zh' name='Top_reserve_holders_2023.csv' table='[Top_reserve_holders_2023#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='COUNTRY' ordinal='0' />
+                  <column datatype='real' name='gold_reserves_2023' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#4e79a7' fontname='Trebuchet MS' fontsize='22'>Top Reserve Holders (2023)&#10;</run>
+            <run bold='true' fontcolor='#000000' fontname='Trebuchet MS' fontsize='12'>Gold Reserves at National Valuation</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text />
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='gold_reserve_comparison_2023' name='federated.1rn6mvu0ewiimg15ygmfu0rpeitl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1rn6mvu0ewiimg15ygmfu0rpeitl'>
+            <column caption='Country' datatype='string' name='[COUNTRY]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <aliases>
+                <alias key='&quot;China, People&apos;s Republic of&quot;' value='China' />
+                <alias key='&quot;Netherlands, The&quot;' value='Netherlands' />
+                <alias key='&quot;Türkiye, Republic of&quot;' value='Türkiye' />
+              </aliases>
+            </column>
+            <column caption='Value Label Position' datatype='real' name='[Calculation_4641632251498497]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[gold_reserves_2023] + 5000' />
+            </column>
+            <column caption='Gold Reserves 2023' datatype='real' name='[gold_reserves_2023]' role='measure' type='quantitative' />
+            <column-instance column='[COUNTRY]' derivation='None' name='[none:COUNTRY:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4641632251498497]' derivation='Sum' name='[sum:Calculation_4641632251498497:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gold_reserves_2023]' derivation='Sum' name='[sum:gold_reserves_2023:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]' direction='DESC' using='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:gold_reserves_2023:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:Calculation_4641632251498497:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:Calculation_4641632251498497:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:gold_reserves_2023:qk]' scope='rows' value='Gold Reserves at National Valuation (USD Millions)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]' value='124' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]' value='8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]' value='false' />
+            <format attr='text-orientation' field='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='text-orientation' value='-90' />
+                <format attr='vertical-align' value='bottom' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-style' value='normal' />
+                <format attr='color' value='#ffffff' />
+                <format attr='font-size' value='14' />
+                <format attr='font-family' value='Trebuchet MS' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.813093900680542' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:gold_reserves_2023:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]' />
+              <color column='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='text-orientation' value='-90' />
+                <format attr='vertical-align' value='bottom' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-style' value='normal' />
+                <format attr='color' value='#ffffff' />
+                <format attr='font-family' value='Trebuchet MS' />
+                <format attr='font-size' value='12' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8020994663238525' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:Calculation_4641632251498497:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:gold_reserves_2023:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-orientation' value='0' />
+                <format attr='vertical-align' value='center' />
+                <format attr='wrap' value='on' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-style' value='normal' />
+                <format attr='color' value='#ffffff' />
+                <format attr='font-size' value='14' />
+                <format attr='font-family' value='Trebuchet MS' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.813093900680542' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:gold_reserves_2023:qk] + [federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[sum:Calculation_4641632251498497:qk])</rows>
+        <cols>[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]</cols>
+      </table>
+      <simple-id uuid='{2FF17E2B-C7AB-435B-A9DB-82849AF6ACFD}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='200'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[:Measure Names]' show-title='false' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='91'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1rn6mvu0ewiimg15ygmfu0rpeitl].[none:COUNTRY:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{51790B6E-E339-4194-9BE7-B24D785D238B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
